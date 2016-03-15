@@ -36,8 +36,11 @@ $xcrud2->language('en');
     echo $xcrud2->where('customerNumber =', 103); // see only the row that have CustomerNumber == 103
 
     $xcrud3 = Xcrud::get_instance();
+    $xcrud3->table_name('My Orders table!');
 	$xcrud3->table('orders');
 	$xcrud3->join('orderNumber','orderdetails','orderNumber'); // join orders and orderdetails on orders.orderNumber = orderdetails.orderNumber
+	
+	$xcrud3->benchmark(true);
 
 	echo $xcrud3->render();
 ?>
