@@ -30,6 +30,12 @@ $xcrud2->language('en');
     echo $xcrud2->render('create'); // default view is the CREATE interface
 ?>
  
+<hr />
+
+<?php
+    echo $xcrud2->where('customerNumber =', 103); // see only the row that have CustomerNumber == 103
+?>
+
 <?php echo Xcrud::load_js(); ?>
 </body>
 </html>
