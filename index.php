@@ -3,9 +3,11 @@
 include('./xcrud/xcrud.php');
 $xcrud = Xcrud::get_instance();
 $xcrud->table('base_fields');
+$xcrud->language('en');
 
 $xcrud2 = Xcrud::get_instance();
 $xcrud2->table('customers');
+$xcrud2->language('en');
 ?>
 
 <!DOCTYPE HTML>
@@ -24,7 +26,7 @@ $xcrud2->table('customers');
 <hr />
 
 <?php
-    echo $xcrud2->render();
+    echo $xcrud2->render('create'); // default view is the CREATE interface
 ?>
  
  
