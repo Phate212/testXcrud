@@ -15,6 +15,7 @@ $xcrud2->language('en');
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Some page title</title>
+    <?php echo Xcrud::load_css(); ?>
 </head>
  
 <body>
@@ -29,6 +30,6 @@ $xcrud2->language('en');
     echo $xcrud2->render('create'); // default view is the CREATE interface
 ?>
  
- 
+<?php echo Xcrud::load_js(); ?>
 </body>
 </html>
