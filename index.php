@@ -3,6 +3,9 @@
 include('./xcrud/xcrud.php');
 $xcrud = Xcrud::get_instance();
 $xcrud->table('base_fields');
+
+$xcrud2 = Xcrud::get_instance();
+$xcrud2->table('customers');
 ?>
 
 <!DOCTYPE HTML>
@@ -17,6 +20,13 @@ $xcrud->table('base_fields');
 <?php
     echo $xcrud->render();
 ?>
+
+<hr />
+
+<?php
+    echo $xcrud2->render();
+?>
+ 
  
 </body>
 </html>
